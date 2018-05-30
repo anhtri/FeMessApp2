@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <include layout="@layout/app_bar_layout" android:id="@+id/chat_appbar"></include>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/layoutMessageSwipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/control_chat"
+        android:layout_below="@id/chat_appbar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/control_chat"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnAdd_chat"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            app:srcCompat="@drawable/add" />
+
+        <EditText
+            android:id="@+id/edtMessage_chat"
+            android:layout_width="296dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/btnAdd_chat"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:text="Name" />
+
+        <ImageButton
+            android:id="@+id/btnSend_chat"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            app:srcCompat="@drawable/send" />
+
+    </LinearLayout>
+
+</RelativeLayout>

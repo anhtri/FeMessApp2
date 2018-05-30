@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FeMessApp</string>
+    <string name="log_out">Log Out</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="status">Status</string>
+    <string name="save_change">Save Change</string>
+
+</resources>

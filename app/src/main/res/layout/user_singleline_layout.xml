@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar_user_item"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/no_avatar" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgOnline"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignEnd="@+id/txtStatus_user_item"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="27dp"
+        android:src="@color/colorGreen"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/txtName_user_item"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/avatar_user_item"
+        android:singleLine="true"
+        android:text="Name"
+        android:textColor="@color/colorBlack"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtStatus_user_item"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtName_user_item"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/avatar_user_item"
+        android:singleLine="true"
+        android:text="Status"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp" />
+
+</RelativeLayout>
